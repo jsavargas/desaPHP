@@ -7,9 +7,9 @@ $pag = file_get_contents("http://www.emol.com/economia/");
 
 
 
-$cadena = eregi_replace(“[\n|\r|\n\r]”, ‘ ‘, $pag);
+$cadena = preg_replace(“[\n|\r|\n\r]”, ‘ ‘, $pag);
 
-
+echo "cadena[$cadena]";
 
 preg_match("/(Dolar Observado).+?<span.+?>(.+?)<\/span>/m",$cadena,$matchs);
 
