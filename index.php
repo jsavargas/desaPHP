@@ -11,7 +11,7 @@ echo "pag[$pag]";
 
 //echo "cadena[$cadena]";
 
-preg_match("/(dolar observado).+?<span.+?>(.+?)</span>/im",$pag,$matchs);
+echo preg_match("/(dolar observado).+?<span.+?>(.+?)</span>/im",$pag,$matchs);
 
 
 
