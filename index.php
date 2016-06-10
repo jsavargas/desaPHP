@@ -6,7 +6,12 @@ $pag = file_get_contents("http://www.emol.com/economia/");
 //echo $pag;
 
 
-preg_match("/(Dolar Observado).+?<span.+?>(.+?)<\/span>/m",$pag,$matchs);
+
+$cadena = eregi_replace(“[\n|\r|\n\r]”, ‘ ‘, $pag);
+
+
+
+preg_match("/(Dolar Observado).+?<span.+?>(.+?)<\/span>/m",$cadena,$matchs);
 
 
 
