@@ -3,11 +3,13 @@
 $pag = file_get_contents("http://www.emol.com/economia/");
 
 
+
+
+
+$pag = preg_replace(“[\n|\r|\n\r]”,' ', $pag);
+
+
 echo "pag[$pag]";
-
-
-
-//$cadena = preg_replace(“[\n|\r|\n\r]”,' ', $pag);
 
 //echo "cadena[$cadena]";
 
